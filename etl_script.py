@@ -74,7 +74,7 @@ def main():
         top_clients_volume.to_excel(writer, sheet_name="ByVolume", index=False)
         top_clients_pnl.to_excel(writer, sheet_name="ByPnL", index=False)
 
-    # графіки
+    # побудова графіків
     plt.figure(figsize=(10, 5))
     sns.lineplot(data=agg_df, x="week_start_date", y="total_volume", hue="client_type")
     plt.title("Обсяг торгів по тижнях за типом клієнта")

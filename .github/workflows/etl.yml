@@ -25,3 +25,10 @@ jobs:
 
       - name: Run ETL script
         run: python etl_script.py
+
+      - name: Save output files
+        uses: actions/upload-artifact@v4
+        with:
+          name: etl-output
+          path: output/
+

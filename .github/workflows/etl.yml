@@ -9,6 +9,7 @@ on:
 jobs:
   run-etl:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -18,8 +19,9 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: Install pandas
-        run: pip install pandas
+      - name: Install dependencies
+        run: |
+          pip install pandas matplotlib seaborn openpyxl
 
       - name: Run ETL script
         run: python etl_script.py

@@ -40,7 +40,7 @@ def load(df, db_path, table_name="agg_trades_weekly"):
     conn.close()
 
 def main():
-    csv_path = "trades.csv"
+    csv_path = "data/trades.csv"
     db_path = "agg_result.db"
 
     df = extract(csv_path)
